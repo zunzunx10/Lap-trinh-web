@@ -1,0 +1,95 @@
+1.Mở đầu 
+<!doctype html>
+<html lang=”vi”>
+    <head>
+        <title>Dũng lập trình web</title>
+        <meta charset=”utf-8”>
+    </head>
+    <body>
+    </body>
+</html>
+2. Văn bản
+<p> ___ </p>: paragraph
+<h1> ___ </h1> (1-6): headings
+linebreak: 
+    <br> (cuối câu)
+    <pre>___</pre>: viết text giữ nguyên khoảng cách (không đặt chung vs thẻ <p></p>)
+<b>___</b>: bold
+<strong>___</strong>: in đậm
+<i>___</i>: italics
+<em>___</em>: emphasize (in nghiêng)
+<u>___</u>: underline
+<abbr name=”tên đầy đủ”> chữ viết tắt </abbr>: giải thích chữ viết tắt
+<defn title=”tên đầy đủ”> định nghĩa </defn>: giải thích định nghĩa (chữ sẽ in nghiêng)
+<hr>: kẻ đường kẻ ngang ngăn cách chủ đề
+list:
+    unordered list: không đặt trong thẻ <p></p>
+        <ul style="list-style-type:...">
+            <li> item1 </li>
+            <li> item2 </li>
+        </ul>
+    ordered list: không đặt trong thẻ <p></p>
+        <ol type="...">
+            <li> item1 </li>
+            <li> item2 </li>
+        </ol>
+    description list: dùng cho 1 định nghĩa như kiểu từ điển (không đặt trong thẻ <p></p>)
+        <dl>
+            <dt>name1</dt>
+            <dd>value1</dd>
+            <dt>name2</dt>
+            <dd>value2</dd> 
+        </dl>
+<img src="..." alt="..." width="..." height="...">: insert ảnh, nếu lỗi thì thay thế (alt)
+<figure>
+    <img ...>
+    <figcaption>text (caption)</figcaption>
+</figure>
+--> chú thích cho ảnh (thẻ <img> phải nằm trong figure)
+<video width="" height="" controls autoplay...>
+    <source src="" type="video/mp4">
+</video>
+--> insert video
+<a href=”...” target=”...” (_blank: new tab; _top: current tab;_self: current frame; framename: targeted frame)>content</a>
+<a id=”index”>content</a>
+<a href="#index">content</a>
+<iframe src="..." width ="num" height="num"></iframe>: nhúng link 
+table
+    <table border=”num”>
+        <caption>content</caption>
+        <tr>
+            <td width=”num” colspan=”num” rowspan=”num”>content</td>
+        </tr>
+    --> table vô nghĩa
+    <table border="num">
+        <caption>content</caption>
+        <thead>
+            <tr>
+                <th>content</th>
+            </tr>
+        </thead>
+        <tfoot>
+           <th>content</th> 
+        </tfoot>
+        <tbody>
+            <td>content</td>
+        </tbody>
+    </table>
+    --> table có ngữ nghĩa
+<form name="..." action="" method="(get/post)"> 
+    <fieldset>
+        <legend>content</legend>: nhóm và đặt tên nhóm ttin
+        <label for="...(id)"> content </label>: thẻ nhãn (đặt trc nằm bên trái, đặt sau nằm bên phải)
+        <input type="text/password" id="..." name="..." value="...(chữ trong ô nhập liệu)">></input>
+        <input type="submit/data/color" id="..." name="..." value="..."></input>
+        <input type="data" id="..." name="..." value="..."></input>
+        <input type="range" id="..." name="..." min="num" max="num" step="num" value="..."></input>
+        <input type="radio" id="..." name="...(chỉ đc pick 1 lựa chọn thì phải cùng name)" value="..." (checked)>content</input>
+        <input type="checkbox" id="..." name="...(chỉ đc pick 1 lựa chọn thì phải cùng name)" value="..." (checked)>content</input>
+        <textarea id="..." name="..." rows="..." cols="..."></textarea>
+    </fieldset>
+</form>
+*note: id ~ name but <name> is important in grouping in4 while <id> is crucial in controls in4 
+<select (multiple)>
+    <option value="..." (selected)> content </option>
+</select>
